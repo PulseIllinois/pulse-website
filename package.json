@@ -1,5 +1,6 @@
 {
   "name": "pulse2023-website",
+  "homepage": "https://pulseece.web.engr.illinois.edu",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
