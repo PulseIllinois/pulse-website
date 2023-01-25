@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 420px;
+}
+
+.footer {
+  height: 440px;
+}
+
+h1 {
+  padding-bottom: 20px;
+  text-decoration: underline;
+  /* font-size: larger; */
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+}
+
+.logo {
+  max-width: 25%;
+  max-height: 25%;
+}

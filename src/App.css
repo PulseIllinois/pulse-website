@@ -13,7 +13,11 @@
   }
 }
 
-.App-header {
+.App h1 {
+  font-size: 1.75rem;
+}
+
+/* .App-article {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,7 +26,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
@@ -32,7 +36,33 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+html,
+body {
+  background-color: #1A1D21;
+  color: white;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  /* flex-direction: column; */
+  width: 100%;
+  min-height: 100vh;
+  /* border: 3px red solid; */
 }
