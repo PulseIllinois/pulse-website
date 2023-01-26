@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
-  // const [currentPage, setCurrentPage] = useState(window.location.pathname);
   const loc = useLocation().pathname;
   return (
     <nav>
@@ -15,6 +14,7 @@ const Navbar = () => {
           <h3><Link className={`${styles.link} ${loc === "/sponsors" ? styles.active : ''}`} to="/sponsors">SPONSORS</Link></h3>
           <h3><Link className={`${styles.link} ${loc === "/events" ? styles.active : ''}`} to="/events">EVENTS</Link></h3>
           <h3><Link className={`${styles.link} ${loc === "/our-team" ? styles.active : ''}`} to="/our-team">OUR TEAM</Link></h3>
+          <h3><Link className={`${styles.link} ${loc === "/contact-us" ? styles.active : ''}`} to="/contact-us">CONTACT US</Link></h3>
         </div>
       </div>
     </nav>
