@@ -34,4 +34,8 @@ h1 {
   .container {
     padding-bottom: 150px;
   }
+
+  h1 {
+    padding-bottom: 25px;
+  }
 }

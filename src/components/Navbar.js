@@ -17,10 +17,9 @@ const Navbar = () => {
   }
 
   return (
-    <nav>
-      <div className={styles.container}>
+      <nav className={styles.container}>
         <Link to="/">
-          <img style={{ width: '70px', height: '70px', paddingTop: "20px" }} src={require("../assets/Icon_t.png")} alt="Pulse 2023 Logo" />
+          <img className={styles.mainLogo} src={require("../assets/Icon_t.png")} alt="Pulse 2023 Logo" />
         </Link>
         <div className={styles.linkContainer}>
           <h3><Link className={`${styles.link} ${loc === "/" ? styles.active : ''}`} to="/">HOME</Link></h3>
@@ -41,8 +40,7 @@ const Navbar = () => {
             <h3><Link onClick={handleClose} className={`${styles.link} ${loc === "/contact-us" ? styles.active : ''}`} to="/contact-us">CONTACT US</Link></h3>
           </div>}
 
-      </div>
-    </nav>
+      </nav>
   )
 }
 

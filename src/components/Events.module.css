@@ -107,8 +107,8 @@ h1 {
   }
 
   .card {
-    width: 80%;
-    height: 220px;
+    width: 220px;
+    height: 190pxpx;
     display: flex;
     flex-direction: column;
     justify-content: center;
