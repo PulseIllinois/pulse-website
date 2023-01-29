@@ -1,15 +1,15 @@
 import { useState } from "react";
+import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+// import { jsx } from "@emotion/core";
 import Footer from "./Footer";
 import styles from "./Events.module.css";
 
 const EventCard = ({ title, time, location }) => {
   return (
     <div className={styles.card}>
-      <div style={{ padding: "10px" }}>
-        <h3>{title}</h3>
-        <p>{time}</p>
-        <p>{location}</p>
-      </div>
+      <h3>{title}</h3>
+      <p>{time}</p>
+      <p>{location}</p>
     </div>
   )
 }
@@ -29,7 +29,7 @@ const data = [
         location: "ECEB 3002"
       },
       {
-        title: "Dinner",
+        title: "Dinner: Sponsored by Capital One",
         time: "7 - 8 PM",
         location: "ECEB 3002"
       },
@@ -218,6 +218,11 @@ function Events() {
     setEventData(newData);
   }
 
+  const handleChange = (event) => {
+    let day = event.target.value;
+    handleClick(day);
+  }
+
   return (
     <div className={styles.container}>
       <h1>Event Schedule</h1>
@@ -229,6 +234,45 @@ function Events() {
         <button onClick={() => handleClick(4)} className={`${styles.dayBtn} ${currentDay === 4 ? styles.active : ''}`}>February 10th</button>
         <button onClick={() => handleClick(5)} className={`${styles.dayBtn} ${currentDay === 5 ? styles.active : ''}`}>February 11th</button>
         <button onClick={() => handleClick(6)} className={`${styles.dayBtn} ${currentDay === 6 ? styles.active : ''}`}>February 12th</button>
+      </div>
+
+      <div className={styles.mobileBtn}>
+        <FormControl
+          fullWidth
+          sx={{
+            borderColor: "white",
+            color: "white",
+          }}
+        >
+          <InputLabel sx={{ color: "white" }} id="day-label">Day</InputLabel>
+          <Select
+            labelId="day-label"
+            id="day-select"
+            value={currentDay}
+            defaultValue={0}
+            label="Age"
+            onChange={handleChange}
+            sx={{
+              borderColor: "white",
+              color: "white",
+              '.MuiOutlinedInput-notchedOutline': {
+                borderColor: 'white',
+              },
+              '&:hover .MuiOutlinedInput-notchedOutline': {
+                borderColor: 'white',
+                borderWidth: '0.15rem',
+              },
+            }}
+          >
+            <MenuItem value={0}>February 6th</MenuItem>
+            <MenuItem value={1}>February 7th</MenuItem>
+            <MenuItem value={2}>February 8th</MenuItem>
+            <MenuItem value={3}>February 9th</MenuItem>
+            <MenuItem value={4}>February 10th</MenuItem>
+            <MenuItem value={5}>February 11th</MenuItem>
+            <MenuItem value={6}>February 12th</MenuItem>
+          </Select>
+        </FormControl>
       </div>
 
       <div className={styles.row}>

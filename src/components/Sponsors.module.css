@@ -37,3 +37,18 @@ h1 {
   max-width: 25%;
   max-height: 25%;
 }
+
+@media screen and (max-width: 480px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .logo {
+    max-width: 75%;
+    max-height: 75%;
+  }
+
+  .container {
+    padding-bottom: 50px;
+  }
+}

@@ -2,6 +2,7 @@ import Footer from "./Footer";
 import { MdEmail } from 'react-icons/md';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { GrInstagram } from 'react-icons/gr';
+import { SiLinktree } from 'react-icons/si'
 import styles from "./ContactUs.module.css";
 
 function ContactUs() {
@@ -24,9 +25,11 @@ function ContactUs() {
           <a className={styles.iconBtn} href="https://www.linkedin.com/company/pulseuiuc/" target="_blank" rel="noreferrer">
             <FaLinkedinIn />
           </a>
+          <a className={styles.iconBtn} href="https://linktr.ee/pulse_uiuc" target="_blank" rel="noreferrer">
+            <SiLinktree />
+          </a>
         </div>
       </div>
-
       <Footer className={styles.footer} />
     </div>
   )

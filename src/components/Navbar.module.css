@@ -34,3 +34,64 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+.sidebar {
+  display: none;
+}
+
+.iconBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* .iconBtn:hover {
+  background-color: rgba(255, 255, 255, 0.56);
+  border-radius: 10px;
+  cursor: pointer;
+} */
+
+.menu {
+  display: none;
+}
+
+
+@media screen and (max-width: 480px) {
+  .linkContainer {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    animation: slide 0.3s ease-out;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

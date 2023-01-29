@@ -44,7 +44,11 @@
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
-  line-height: 18px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
   color: white;
 }
@@ -57,4 +61,33 @@
   flex-wrap: wrap;
   padding-top: 100px;
   gap: 80px;
+}
+
+@media screen and (max-width: 480px) {
+  .icons {
+    gap: 25px;
+  }
+
+  .iconBtn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .iconBtn > svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .container {
+    padding-bottom: 100px;
+  }
+
+  .header {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .content {
+    gap: 30px;
+  }
 }
