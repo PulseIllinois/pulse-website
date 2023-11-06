@@ -61,6 +61,7 @@
   flex-wrap: wrap;
   padding-top: 100px;
   gap: 80px;
+  z-index: 10;
 }
 
 @media screen and (max-width: 480px) {
