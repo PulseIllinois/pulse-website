@@ -8,11 +8,11 @@ const directors =
   members: [
     {
       name: "Gagan Kadadevarmath",
-      img: require("../assets/team/gagan.png")
+      img: require("../assets/2023/team/gagan.png")
     },
     {
       name: "Shreya Patil",
-      img: require("../assets/team/shreya.png")
+      img: require("../assets/2023/team/shreya.png")
     },
   ]
 }
@@ -23,7 +23,7 @@ const secretary =
   members: [
     {
       name: "Steffi Chen",
-      img: require("../assets/team/steffi.png")
+      img: require("../assets/2023/team/steffi.png")
     }
   ]
 }
@@ -34,7 +34,7 @@ const treasurer =
   members: [
     {
       name: "Sanjiv Iyer",
-      img: require("../assets/team/sanjiv.png")
+      img: require("../assets/2023/team/sanjiv.png")
     }
   ]
 }
@@ -45,19 +45,19 @@ const corporate =
   members: [
     {
       name: "Sumedh Vaidyanathan",
-      img: require("../assets/team/sumedh.png")
+      img: require("../assets/2023/team/sumedh.png")
     },
     {
       name: "Ravi Thakkar",
-      img: require("../assets/team/ravi.png")
+      img: require("../assets/2023/team/ravi.png")
     },
-    {
-      name: "Rohan Vasavada",
-      img: require("../assets/team/rohan.png")
-    },
+    // {
+    //   name: "Rohan Vasavada",
+    //   img: require("../assets/2023/team/rohan.png")
+    // },
     {
       name: "Manas Anand",
-      img: require("../assets/team/manas.png")
+      img: require("../assets/2023/team/manas.png")
     },
   ]
 }
@@ -66,13 +66,13 @@ const wit =
 {
   title: "Women in Tech Directors",
   members: [
-    {
-      name: "Niharika ChintalapatiI",
-      img: require("../assets/team/neha.png")
-    },
+    // {
+    //   name: "Niharika ChintalapatiI",
+    //   img: require("../assets/2023/team/neha.png")
+    // },
     {
       name: "Manogna Rajanala",
-      img: require("../assets/team/manogna.png")
+      img: require("../assets/2023/team/manogna.png")
     },
   ]
 }
@@ -83,15 +83,15 @@ const technical =
   members: [
     {
       name: "Megna Biederman",
-      img: require("../assets/team/megna.png")
+      img: require("../assets/2023/team/megna.png")
     },
     {
       name: "Vinayak Bagdi",
-      img: require("../assets/team/vinayak.png")
+      img: require("../assets/2023/team/vinayak.png")
     },
     {
       name: "Justin Chen",
-      img: require("../assets/team/justin.png")
+      img: require("../assets/2023/team/justin.png")
     }
   ]
 }
@@ -102,11 +102,11 @@ const competitions =
   members: [
     {
       name: "Jack Gauer",
-      img: require("../assets/team/jack_g.png")
+      img: require("../assets/2023/team/jack_g.png")
     },
     {
       name: "Jack Viebrock",
-      img: require("../assets/team/jack_v.png")
+      img: require("../assets/2023/team/jack_v.png")
     },
   ]
 }
@@ -117,11 +117,11 @@ const media_design =
   members: [
     {
       name: "Ritvik Gandesiri",
-      img: require("../assets/team/ritvik.png")
+      img: require("../assets/2023/team/ritvik.png")
     },
     {
       name: "Meghana Pothukuchi",
-      img: require("../assets/team/meghu.png")
+      img: require("../assets/2023/team/meghu.png")
     },
   ]
 }
@@ -132,7 +132,7 @@ const social_media =
   members: [
     {
       name: "Anushya Iyer",
-      img: require("../assets/team/anushya.png")
+      img: require("../assets/2023/team/anushya.png")
     }
   ]
 }
@@ -143,7 +143,7 @@ const marketing =
   members: [
     {
       name: "Akshat Singh",
-      img: require("../assets/team/akshat.png")
+      img: require("../assets/2023/team/akshat.png")
     }
   ]
 }

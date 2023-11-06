@@ -5,17 +5,18 @@ function Sponsors() {
   return (
     <div className={styles.container}>
       <h1>Sponsors</h1>
-      <div>
+      <h2>TBA</h2>
+      {/* <div>
         <div className={styles.col}>
           <div className={styles.row}>
-            <img className={styles.logo} src={require("../assets/AMD.png")} alt="AMD Logo" />
+            <img className={styles.logo} src={require("../assets/2023/AMD.png")} alt="AMD Logo" />
           </div>
           <div className={styles.row}>
-            <img className={styles.logo} src={require("../assets/Capital One white.png")} alt="Capital One Logo" />
-            <img className={styles.logo} src={require("../assets/Texas Instruments white.png")} alt="Texas Instruments Logo" />
+            <img className={styles.logo} src={require("../assets/2023/Capital One white.png")} alt="Capital One Logo" />
+            <img className={styles.logo} src={require("../assets/2023/Texas Instruments white.png")} alt="Texas Instruments Logo" />
           </div>
         </div>
-      </div>
+      </div> */}
       <Footer className={styles.footer} />
     </div>
   )

@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
       <nav className={styles.container}>
         <Link to="/">
-          <img className={styles.mainLogo} src={require("../assets/Icon_t.png")} alt="Pulse 2023 Logo" />
+          <img className={styles.mainLogo} src={require("../assets/2024/Icon_transparent.png")} alt="Pulse 2023 Logo" />
         </Link>
         <div className={styles.linkContainer}>
           <h3><Link className={`${styles.link} ${loc === "/" ? styles.active : ''}`} to="/">HOME</Link></h3>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
-// import { jsx } from "@emotion/core";
 import Footer from "./Footer";
 import styles from "./Events.module.css";
 
@@ -21,17 +20,22 @@ const data = [
       {
         title: "Opening Ceremony + Swag Pickup",
         time: "5 - 5:30 PM",
-        location: "Grainger Auditorium"
-      },
-      {
-        title: "Lightning Talks",
-        time: "5:30 - 7 PM",
         location: "ECEB 3002"
       },
       {
-        title: "Dinner: Sponsored by Capital One",
+        title: "Lightning Talk with Nick Chagin",
+        time: "5:30 - 6 PM",
+        location: "ECEB 3002"
+      },
+      {
+        title: "Lightning Talks with Capital One",
+        time: "6 - 7 PM",
+        location: "ECEB 3002"
+      },
+      {
+        title: "Dinner",
         time: "7 - 8 PM",
-        location: "ECEB 3002"
+        location: "Subway - ECEB 3002"
       },
     ]
   },
@@ -41,27 +45,22 @@ const data = [
       {
         title: "Coffee Chat with Texas Instruments",
         time: "10 - 11 AM",
-        location: "Atrium"
+        location: "ECEB 1000/Atrium"
       },
       {
         title: "Snack",
-        time: "5 - 6 PM",
-        location: "ECEB 3002"
+        time: "5:30 - 6 PM",
+        location: "ECEB 1013"
       },
       {
-        title: "Tech Talk",
+        title: "Tech Talk with Brandon Dohman",
         time: "6 - 7 PM",
-        location: "ECEB 3002"
+        location: "ECEB 1013"
       },
       {
-        title: "Meet & Greet",
+        title: "Dinner - Jimmy Johns",
         time: "7 - 8 PM",
-        location: "Atrium"
-      },
-      {
-        title: "Dinner",
-        time: "8 - 9 PM",
-        location: "ECEB 3002"
+        location: "ECEB 1013"
       }
     ]
   },
@@ -69,37 +68,33 @@ const data = [
     day: 2,
     events: [
       {
-        title: "Coffee Chat",
-        time: "10 - 11 AM",
-        location: "Atrium"
-      },
-      {
-        title: "Keynote",
+        title: "Keynote - Naweed Anjum",
         time: "5 - 6 PM",
         location: "Grainger Auditorium"
       },
       {
-        title: "Dinner",
-        time: "6 - 7 PM",
+        title: "Dinner - Signature Grill",
+        time: "6 - 6:45 PM",
         location: "ECEB 3002"
       },
       {
-        title: "Design Competition",
+        title: "Design Competition with Late Night Snack",
         time: "7 - 9 PM",
         location: "ECEB 3002"
       },
       {
-        title: "Late Snack",
+        title: "Late Night Snack (for participants)",
         time: "8:30 - 9 PM",
         location: "ECEB 3002"
-      }
+      },
+
     ]
   },
   {
     day: 3,
     events: [
       {
-        title: "Lunch + Speakers",
+        title: "Lunch & Lightning Talks - Panera",
         time: "12 - 1:30 PM",
         location: "ECEB 3002"
       },
@@ -109,19 +104,9 @@ const data = [
         location: "ECEB 3002"
       },
       {
-        title: "Social/Snack Break",
-        time: "4 - 5 PM",
-        location: "ECEB 3002"
-      },
-      {
-        title: "Keynote",
-        time: "5 - 6 PM",
-        location: "ECEB 3002"
-      },
-      {
-        title: "Dinner: Sponsored by AMD",
-        time: "6 - 7 PM",
-        location: "ECEB 3002"
+        title: "Keynote with Dinner - Nivi Baral",
+        time: "5 - 7 PM",
+        location: "ECEB 3002 - Papa Dels"
       }
     ]
   },
@@ -129,24 +114,24 @@ const data = [
     day: 4,
     events: [
       {
-        title: "Recruiting Fair",
+        title: "Opportunities Fair",
         time: "1 - 3 PM",
         location: "ECEB 1000/Atrium"
       },
       {
-        title: "Software Competition",
+        title: "Software Competition with Dinner",
         time: "4 - 6 PM",
-        location: "Grainger Auditorium"
+        location: "Grainger Auditorium - Fazolis"
       },
       {
-        title: "Dinner",
+        title: "Dinner - Fazolis (for participants)",
         time: "6 - 7 PM",
         location: "ECEB 3002"
       },
       {
         title: "Soldering Workshop - HKN",
         time: "7 - 9 PM",
-        location: "ECEB 4072"
+        location: "ECEB 1001"
       },
     ]
   },
@@ -159,7 +144,12 @@ const data = [
         location: "ECEB 3002"
       },
       {
-        title: "Dinner (participants only)",
+        title: "Breakfast (for participants)",
+        time: "10 - 11 AM",
+        location: "ECEB 3002"
+      },
+      {
+        title: "Dinner - Dominoes (for participants)",
         time: "5 - 6 PM",
         location: "ECEB 3002"
       },
@@ -194,7 +184,7 @@ const data = [
         location: "ECEB 2022/3022"
       },
       {
-        title: "Speakers + Lunch",
+        title: "Speakers + Lunch - Dominoes",
         time: "12 - 1 PM",
         location: "ECEB 3002"
       },
@@ -226,7 +216,8 @@ function Events() {
   return (
     <div className={styles.container}>
       <h1>Event Schedule</h1>
-      <div className={styles.btnContainer}>
+
+      {/* <div className={styles.btnContainer}>
         <button onClick={() => handleClick(0)} className={`${styles.dayBtn} ${currentDay === 0 ? styles.active : ''}`}>February 6th</button>
         <button onClick={() => handleClick(1)} className={`${styles.dayBtn} ${currentDay === 1 ? styles.active : ''}`}>February 7th</button>
         <button onClick={() => handleClick(2)} className={`${styles.dayBtn} ${currentDay === 2 ? styles.active : ''}`}>February 8th</button>
@@ -234,9 +225,13 @@ function Events() {
         <button onClick={() => handleClick(4)} className={`${styles.dayBtn} ${currentDay === 4 ? styles.active : ''}`}>February 10th</button>
         <button onClick={() => handleClick(5)} className={`${styles.dayBtn} ${currentDay === 5 ? styles.active : ''}`}>February 11th</button>
         <button onClick={() => handleClick(6)} className={`${styles.dayBtn} ${currentDay === 6 ? styles.active : ''}`}>February 12th</button>
-      </div>
+      </div> */}
 
-      <div className={styles.mobileBtn}>
+      <h2>
+        TBA
+      </h2>
+      
+      {/* <div className={styles.mobileBtn}>
         <FormControl
           fullWidth
           sx={{
@@ -284,7 +279,8 @@ function Events() {
             location={item.location}
           />
         ))}
-      </div>
+      </div> */}
+
       <Footer className={styles.footer} />
     </div>
   )

@@ -56,13 +56,13 @@ h1 {
 
 .dayBtn:hover {
   /* text-decoration: underline; */
-  background-color: rgba(126, 209, 228, 0.56);
+  background-color: rgba(246, 135, 31, 0.56);
   padding: 10px;
   border-radius: 10px;
 }
 
 .active {
-  background-color: rgba(126, 209, 228, 0.56);
+  background-color: rgba(246, 135, 31, 0.56);
   padding: 10px;
   border-radius: 10px;
 }
