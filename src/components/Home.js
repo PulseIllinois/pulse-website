@@ -15,7 +15,7 @@ function Home() {
           Welcome to the thirteenth annual technology conference to celebrate the latest developments in the ECE and CS departments at the University of Illinois Urbana-Champaign!
         </div>
       </div>
-      <button className={styles.btn} onClick={clickRegister}>Apply for our staff!</button>
+      {/* <button className={styles.btn} onClick={clickRegister}>Apply for our staff!</button> */}
 
       <Footer />
     </div>
