@@ -217,13 +217,13 @@ function Events() {
       <h1>Event Schedule</h1>
 
        <div className={styles.btnContainer}>
-        <button onClick={() => handleClick(0)} className={`${styles.dayBtn} ${currentDay === 0 ? styles.active : ''}`}>February 6th</button>
-        <button onClick={() => handleClick(1)} className={`${styles.dayBtn} ${currentDay === 1 ? styles.active : ''}`}>February 7th</button>
-        <button onClick={() => handleClick(2)} className={`${styles.dayBtn} ${currentDay === 2 ? styles.active : ''}`}>February 8th</button>
-        <button onClick={() => handleClick(3)} className={`${styles.dayBtn} ${currentDay === 3 ? styles.active : ''}`}>February 9th</button>
-        <button onClick={() => handleClick(4)} className={`${styles.dayBtn} ${currentDay === 4 ? styles.active : ''}`}>February 10th</button>
-        <button onClick={() => handleClick(5)} className={`${styles.dayBtn} ${currentDay === 5 ? styles.active : ''}`}>February 11th</button>
-        <button onClick={() => handleClick(6)} className={`${styles.dayBtn} ${currentDay === 6 ? styles.active : ''}`}>February 12th</button>
+        <button onClick={() => handleClick(0)} className={`${styles.dayBtn} ${currentDay === 0 ? styles.active : ''}`}>February 10th</button>
+        <button onClick={() => handleClick(1)} className={`${styles.dayBtn} ${currentDay === 1 ? styles.active : ''}`}>February 11th</button>
+        <button onClick={() => handleClick(2)} className={`${styles.dayBtn} ${currentDay === 2 ? styles.active : ''}`}>February 12th</button>
+        <button onClick={() => handleClick(3)} className={`${styles.dayBtn} ${currentDay === 3 ? styles.active : ''}`}>February 13th</button>
+        <button onClick={() => handleClick(4)} className={`${styles.dayBtn} ${currentDay === 4 ? styles.active : ''}`}>February 14th</button>
+        <button onClick={() => handleClick(5)} className={`${styles.dayBtn} ${currentDay === 5 ? styles.active : ''}`}>February 15th</button>
+        <button onClick={() => handleClick(6)} className={`${styles.dayBtn} ${currentDay === 6 ? styles.active : ''}`}>February 16th</button>
       </div>
 
       
@@ -255,13 +255,13 @@ function Events() {
               },
             }}
           >
-            <MenuItem value={0}>February 6th</MenuItem>
-            <MenuItem value={1}>February 7th</MenuItem>
-            <MenuItem value={2}>February 8th</MenuItem>
-            <MenuItem value={3}>February 9th</MenuItem>
-            <MenuItem value={4}>February 10th</MenuItem>
-            <MenuItem value={5}>February 11th</MenuItem>
-            <MenuItem value={6}>February 12th</MenuItem>
+            <MenuItem value={0}>February 106th</MenuItem>
+            <MenuItem value={1}>February 11th</MenuItem>
+            <MenuItem value={2}>February 12th</MenuItem>
+            <MenuItem value={3}>February 13th</MenuItem>
+            <MenuItem value={4}>February 14th</MenuItem>
+            <MenuItem value={5}>February 15th</MenuItem>
+            <MenuItem value={6}>February 16th</MenuItem>
           </Select>
         </FormControl>
       </div>
