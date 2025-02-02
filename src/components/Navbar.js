@@ -22,10 +22,11 @@ const Navbar = () => {
           <img className={styles.mainLogo} src={require("../assets/2025/Icon_transparent.png")} alt="Pulse 2025 Logo" />
         </Link>
         <div className={styles.linkContainer}>
-          {/* <h3><Link className={`${styles.link} ${loc === "/" ? styles.active : ''}`} to="/">HOME</Link></h3>
-          <h3><Link className={`${styles.link} ${loc === "/sponsors" ? styles.active : ''}`} to="/sponsors">SPONSORS</Link></h3>
+          <h3><Link className={`${styles.link} ${loc === "/" ? styles.active : ''}`} to="/">HOME</Link></h3>
+          <h3><Link className={`${styles.link} ${loc === "/about-us" ? styles.active : ''}`} to="/about-us">ABOUT US</Link></h3>
+          {/*<h3><Link className={`${styles.link} ${loc === "/sponsors" ? styles.active : ''}`} to="/sponsors">SPONSORS</Link></h3>*/}
           <h3><Link className={`${styles.link} ${loc === "/events" ? styles.active : ''}`} to="/events">EVENTS</Link></h3>
-          <h3><Link className={`${styles.link} ${loc === "/our-team" ? styles.active : ''}`} to="/our-team">OUR TEAM</Link></h3>*/}
+          <h3><Link className={`${styles.link} ${loc === "/our-team" ? styles.active : ''}`} to="/our-team">OUR TEAM</Link></h3>
           <h3><Link className={`${styles.link} ${loc === "/contact-us" ? styles.active : ''}`} to="/contact-us">CONTACT US</Link></h3> 
         </div>
 
@@ -34,9 +35,10 @@ const Navbar = () => {
           <div className={`${styles.sidebar} ${isOpen ? styles.slideIn : ''}`}>
             <AiOutlineClose onClick={handleClose} size={30} className={styles.iconBtn} />
             <h3><Link onClick={handleClose} className={`${styles.link} ${loc === "/" ? styles.active : ''}`} to="/">HOME</Link></h3>
-            {/* <h3><Link onClick={handleClose} className={`${styles.link} ${loc === "/sponsors" ? styles.active : ''}`} to="/sponsors">SPONSORS</Link></h3>
+            {/* <h3><Link onClick={handleClose} className={`${styles.link} ${loc === "/sponsors" ? styles.active : ''}`} to="/sponsors">SPONSORS</Link></h3>*/}
             <h3><Link onClick={handleClose} className={`${styles.link} ${loc === "/events" ? styles.active : ''}`} to="/events">EVENTS</Link></h3>
-            <h3><Link onClick={handleClose} className={`${styles.link} ${loc === "/our-team" ? styles.active : ''}`} to="/our-team">OUR TEAM</Link></h3> */}
+            <h3><Link onClick={handleClose} className={`${styles.link} ${loc === "/about-us" ? styles.active : ''}`} to="/about-us">ABOUT US</Link></h3>
+            <h3><Link onClick={handleClose} className={`${styles.link} ${loc === "/our-team" ? styles.active : ''}`} to="/our-team">OUR TEAM</Link></h3> 
             <h3><Link onClick={handleClose} className={`${styles.link} ${loc === "/contact-us" ? styles.active : ''}`} to="/contact-us">CONTACT US</Link></h3>
           </div>}
 

@@ -204,7 +204,6 @@ function Events() {
   const handleClick = (day) => {
     setCurrentDay(day);
     let newData = data.filter((item) => item.day === day)[0].events;
-    setEventData();
     setEventData(newData);
   }
 
@@ -217,7 +216,7 @@ function Events() {
     <div className={styles.container}>
       <h1>Event Schedule</h1>
 
-      {/* <div className={styles.btnContainer}>
+       <div className={styles.btnContainer}>
         <button onClick={() => handleClick(0)} className={`${styles.dayBtn} ${currentDay === 0 ? styles.active : ''}`}>February 6th</button>
         <button onClick={() => handleClick(1)} className={`${styles.dayBtn} ${currentDay === 1 ? styles.active : ''}`}>February 7th</button>
         <button onClick={() => handleClick(2)} className={`${styles.dayBtn} ${currentDay === 2 ? styles.active : ''}`}>February 8th</button>
@@ -225,13 +224,10 @@ function Events() {
         <button onClick={() => handleClick(4)} className={`${styles.dayBtn} ${currentDay === 4 ? styles.active : ''}`}>February 10th</button>
         <button onClick={() => handleClick(5)} className={`${styles.dayBtn} ${currentDay === 5 ? styles.active : ''}`}>February 11th</button>
         <button onClick={() => handleClick(6)} className={`${styles.dayBtn} ${currentDay === 6 ? styles.active : ''}`}>February 12th</button>
-      </div> */}
+      </div>
 
-      <h2>
-        TBA
-      </h2>
       
-      {/* <div className={styles.mobileBtn}>
+      <div className={styles.mobileBtn}>
         <FormControl
           fullWidth
           sx={{
@@ -279,7 +275,7 @@ function Events() {
             location={item.location}
           />
         ))}
-      </div> */}
+      </div>
 
       <Footer className={styles.footer} />
     </div>
