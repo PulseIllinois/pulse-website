@@ -7,16 +7,17 @@ const directors =
   title: "Co-Directors",
   members: [
     {
-      name: "Gagan Kadadevarmath",
-      img: require("../assets/2023/team/gagan.png")
+      name: "Ben Blade",
+      img: require("../assets/2025/team/ben.jpeg")
     },
     {
-      name: "Shreya Patil",
-      img: require("../assets/2023/team/shreya.png")
+      name: "Akshat Singh",
+      img: require("../assets/2025/team/akshat.jpeg")
     },
   ]
 }
 
+/**
 const secretary =
 {
   title: "Secretary",
@@ -27,41 +28,35 @@ const secretary =
     }
   ]
 }
+*/
 
 const treasurer =
 {
   title: "Treasurer",
   members: [
     {
-      name: "Sanjiv Iyer",
-      img: require("../assets/2023/team/sanjiv.png")
+      name: "Cameron Marchese",
+      img: require("../assets/2025/team/cameron.jpeg")
     }
   ]
 }
 
 const corporate =
 {
-  title: "Corporate Directors",
+  title: "Corporate & Networking Directors",
   members: [
     {
-      name: "Sumedh Vaidyanathan",
-      img: require("../assets/2023/team/sumedh.png")
+      name: "Konark Dhingreja",
+      img: require("../assets/2025/team/konark.png")
     },
     {
-      name: "Ravi Thakkar",
-      img: require("../assets/2023/team/ravi.png")
-    },
-    // {
-    //   name: "Rohan Vasavada",
-    //   img: require("../assets/2023/team/rohan.png")
-    // },
-    {
-      name: "Manas Anand",
-      img: require("../assets/2023/team/manas.png")
-    },
+      name: "Stephanie Eze",
+      img: require("../assets/2025/team/stephanie.jpeg")
+    }
   ]
 }
 
+/**
 const wit =
 {
   title: "Women in Tech Directors",
@@ -76,22 +71,19 @@ const wit =
     },
   ]
 }
+*/
 
 const technical =
 {
   title: "Technical Directors",
   members: [
     {
-      name: "Megna Biederman",
-      img: require("../assets/2023/team/megna.png")
+      name: "Aryan Gosaliya",
+      img: require("../assets/2025/team/aryan.png")
     },
     {
-      name: "Vinayak Bagdi",
-      img: require("../assets/2023/team/vinayak.png")
-    },
-    {
-      name: "Justin Chen",
-      img: require("../assets/2023/team/justin.png")
+      name: "Avaneesh Kumar",
+      img: require("../assets/2025/team/avaneesh.jpeg")
     }
   ]
 }
@@ -101,42 +93,43 @@ const competitions =
   title: "Competitions Directors",
   members: [
     {
+      name: "Ananya Krishnan",
+      img: require("../assets/2025/team/ananya.jpeg")
+    },
+    {
+      name: "Mithesh Ballae",
+      img: require("../assets/2025/team/mithesh.png")
+    },
+  ]
+}
+
+const logistics =
+{
+  title: "Logistics Directors",
+  members: [
+    {
       name: "Jack Gauer",
-      img: require("../assets/2023/team/jack_g.png")
+      img: require("../assets/2025/team/jack.jpeg")
     },
     {
-      name: "Jack Viebrock",
-      img: require("../assets/2023/team/jack_v.png")
-    },
-  ]
-}
-
-const media_design =
-{
-  title: "Media & Design Directors",
-  members: [
-    {
-      name: "Ritvik Gandesiri",
-      img: require("../assets/2023/team/ritvik.png")
-    },
-    {
-      name: "Meghana Pothukuchi",
-      img: require("../assets/2023/team/meghu.png")
+      name: "Justin Chen",
+      img: require("../assets/2025/team/justin.jpeg")
     },
   ]
 }
 
-const social_media =
+const social_media_marketing =
 {
-  title: "Social Media",
+  title: "Social Media & Marketing Director",
   members: [
     {
-      name: "Anushya Iyer",
-      img: require("../assets/2023/team/anushya.png")
+      name: "Riya Karkhanis",
+      img: require("../assets/2025/team/riya.jpeg")
     }
   ]
 }
 
+/**
 const marketing =
 {
   title: "Marketing",
@@ -147,6 +140,7 @@ const marketing =
     }
   ]
 }
+*/
 
 
 function OurTeam() {
@@ -158,28 +152,23 @@ function OurTeam() {
       </div>
 
       <div className={styles.row}>
-        <GroupPics title={secretary.title} data={secretary.members} />
         <GroupPics title={treasurer.title} data={treasurer.members} />
-      </div>
-
-      <div className={styles.row}>
         <GroupPics title={technical.title} data={technical.members} />
       </div>
 
       <div className={styles.row}>
         <GroupPics title={corporate.title} data={corporate.members} />
+        <GroupPics title={social_media_marketing.title} data={social_media_marketing.members} />
+      </div>
+
+      <div className={styles.row}>
+        <GroupPics title={logistics.title} data={logistics.members} />
       </div>
 
       <div className={styles.row}>
         <GroupPics title={competitions.title} data={competitions.members} />
-        <GroupPics title={wit.title} data={wit.members} />
       </div>
 
-      <div className={styles.row}>
-        <GroupPics title={media_design.title} data={media_design.members} />
-        <GroupPics title={social_media.title} data={social_media.members} />
-        <GroupPics title={marketing.title} data={marketing.members} />
-      </div>
       <Footer className={styles.footer} />
     </div>
   )
