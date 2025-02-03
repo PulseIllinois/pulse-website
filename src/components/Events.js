@@ -276,9 +276,8 @@ function Events() {
           />
         ))}
       </div>
-
       <Footer className={styles.footer} />
-    </div>
+      </div>
   )
 }
 

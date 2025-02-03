@@ -168,7 +168,6 @@ function OurTeam() {
       <div className={styles.row}>
         <GroupPics title={competitions.title} data={competitions.members} />
       </div>
-
       <Footer className={styles.footer} />
     </div>
   )
