@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
-import Footer from "./Footer";
 import styles from "./Events.module.css";
 
 const EventCard = ({ title, time, location }) => {
@@ -18,24 +17,14 @@ const data = [
     day: 0,
     events: [
       {
-        title: "Opening Ceremony + Swag Pickup",
-        time: "5 - 5:30 PM",
+        title: "Opening Ceremony + Merch Pickup",
+        time: "5 - 6:00 PM",
         location: "ECEB 3002"
       },
       {
-        title: "Lightning Talk with Nick Chagin",
-        time: "5:30 - 6 PM",
+        title: "Dinner (Subway)",
+        time: "6 - 7:00 PM",
         location: "ECEB 3002"
-      },
-      {
-        title: "Lightning Talks with Capital One",
-        time: "6 - 7 PM",
-        location: "ECEB 3002"
-      },
-      {
-        title: "Dinner",
-        time: "7 - 8 PM",
-        location: "Subway - ECEB 3002"
       },
     ]
   },
@@ -43,24 +32,19 @@ const data = [
     day: 1,
     events: [
       {
-        title: "Coffee Chat with Texas Instruments",
-        time: "10 - 11 AM",
-        location: "ECEB 1000/Atrium"
+        title: "Astera Labs Coffee Chat",
+        time: "10 - 11:00 AM",
+        location: "ECEB Atrium"
       },
       {
-        title: "Snack",
-        time: "5:30 - 6 PM",
+        title: "Astera Labs Tech Talk",
+        time: "6 - 7:00 PM",
         location: "ECEB 1013"
       },
       {
-        title: "Tech Talk with Brandon Dohman",
-        time: "6 - 7 PM",
-        location: "ECEB 1013"
-      },
-      {
-        title: "Dinner - Jimmy Johns",
-        time: "7 - 8 PM",
-        location: "ECEB 1013"
+        title: "Dinner (Chipotle)",
+        time: "7 - 8:00 PM",
+        location: "ECEB 3002"
       }
     ]
   },
@@ -68,45 +52,44 @@ const data = [
     day: 2,
     events: [
       {
-        title: "Keynote - Naweed Anjum",
-        time: "5 - 6 PM",
-        location: "Grainger Auditorium"
+        title: "Texas Instruments Coffee Chat",
+        time: "10 AM - 12:00 PM",
+        location: "ECEB Atrium"
       },
       {
-        title: "Dinner - Signature Grill",
-        time: "6 - 6:45 PM",
+        title: "Keynote Event",
+        time: "5 - 6:00 PM",
+        location: "ECEB 1002"
+      },
+      {
+        title: "Dinner (Signature Grill)",
+        time: "6 - 7:00 PM",
         location: "ECEB 3002"
       },
       {
-        title: "Design Competition with Late Night Snack",
-        time: "7 - 9 PM",
+        title: "Design Competition",
+        time: "7:30 - 10 PM",
         location: "ECEB 3002"
       },
-      {
-        title: "Late Night Snack (for participants)",
-        time: "8:30 - 9 PM",
-        location: "ECEB 3002"
-      },
-
     ]
   },
   {
     day: 3,
     events: [
       {
-        title: "Lunch & Lightning Talks - Panera",
-        time: "12 - 1:30 PM",
-        location: "ECEB 3002"
+        title: "Texas Instruments Tech Talk",
+        time: "3 - 4:00 PM",
+        location: "ECEB 1013"
       },
       {
-        title: "Women in Academia Panel",
-        time: "1:30 - 2:30 PM",
-        location: "ECEB 3002"
+        title: "Women in Tech Keynote with Professor Bernhard",
+        time: "5:00 - 6:00 PM",
+        location: "ECEB 1002"
       },
       {
-        title: "Keynote with Dinner - Nivi Baral",
-        time: "5 - 7 PM",
-        location: "ECEB 3002 - Papa Dels"
+        title: "Dinner (Papa Del's Pizza)",
+        time: "6 - 7:00 PM",
+        location: "ECEB 3002"
       }
     ]
   },
@@ -114,25 +97,15 @@ const data = [
     day: 4,
     events: [
       {
-        title: "Opportunities Fair",
-        time: "1 - 3 PM",
-        location: "ECEB 1000/Atrium"
-      },
-      {
-        title: "Software Competition with Dinner",
-        time: "4 - 6 PM",
-        location: "Grainger Auditorium - Fazolis"
-      },
-      {
-        title: "Dinner - Fazolis (for participants)",
-        time: "6 - 7 PM",
+        title: "Software Competition",
+        time: "4 - 6:00 PM",
         location: "ECEB 3002"
       },
       {
-        title: "Soldering Workshop - HKN",
-        time: "7 - 9 PM",
-        location: "ECEB 1001"
-      },
+        title: "Dinner (Mia Zia's Pasta for participants)",
+        time: "6 - 7:00 PM",
+        location: "ECEB 3002"
+      }
     ]
   },
   {
@@ -140,61 +113,16 @@ const data = [
     events: [
       {
         title: "Hardware Competition",
-        time: "10 AM - 7 PM",
+        time: "10 AM - 7:00 PM",
         location: "ECEB 3002"
       },
       {
-        title: "Breakfast (for participants)",
-        time: "10 - 11 AM",
-        location: "ECEB 3002"
-      },
-      {
-        title: "Dinner - Dominoes (for participants)",
-        time: "5 - 6 PM",
+        title: "Dinner (for participants)",
+        time: "7 - 8:00 PM",
         location: "ECEB 3002"
       },
     ]
-  },
-  {
-    day: 6,
-    events: [
-      {
-        title: "High School Day",
-        time: "9 AM - 2 PM",
-        location: "ECEB"
-      },
-      {
-        title: "Meet and Greet (Snacks Provided)",
-        time: "9 - 9:30 AM",
-        location: "ECEB 3002"
-      },
-      {
-        title: "ECEB Tour",
-        time: "9:30 AM - 10 AM",
-        location: "ECEB 3002"
-      },
-      {
-        title: "Coding Workshop 1",
-        time: "10 - 11 AM",
-        location: "ECEB 2022/3022"
-      },
-      {
-        title: "Coding Workshop 2",
-        time: "11 AM - 12 PM",
-        location: "ECEB 2022/3022"
-      },
-      {
-        title: "Speakers + Lunch - Dominoes",
-        time: "12 - 1 PM",
-        location: "ECEB 3002"
-      },
-      {
-        title: "Competitions\n(with Prizes)",
-        time: "1 - 2 PM",
-        location: "ECEB 3002"
-      }
-    ]
-  },
+  }
 ]
 
 function Events() {
@@ -225,7 +153,6 @@ function Events() {
         <button onClick={() => handleClick(3)} className={`${styles.dayBtn} ${currentDay === 3 ? styles.active : ''}`}>February 13th</button>
         <button onClick={() => handleClick(4)} className={`${styles.dayBtn} ${currentDay === 4 ? styles.active : ''}`}>February 14th</button>
         <button onClick={() => handleClick(5)} className={`${styles.dayBtn} ${currentDay === 5 ? styles.active : ''}`}>February 15th</button>
-        <button onClick={() => handleClick(6)} className={`${styles.dayBtn} ${currentDay === 6 ? styles.active : ''}`}>February 16th</button>
       </div>
 
       
@@ -263,14 +190,13 @@ function Events() {
             <MenuItem value={3}>February 13th</MenuItem>
             <MenuItem value={4}>February 14th</MenuItem>
             <MenuItem value={5}>February 15th</MenuItem>
-            <MenuItem value={6}>February 16th</MenuItem>
           </Select>
         </FormControl>
       </div>
 
       <div className={styles.row}>
         {eventData.map((item) => (
-          <EventCard
+          <EventCard className = {styles.card}
             key={`${item.title} ${item.time}`}
             title={item.title}
             time={item.time}

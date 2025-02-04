@@ -1,4 +1,3 @@
-import Footer from './Footer';
 import styles from './AboutUs.module.css';
 
 function AboutUs() {
@@ -16,7 +15,7 @@ professional networking, and connects students with
 industry leaders through insightful talks, dynamic
 panels, and hands-on workshops. Join us in exploring
 the future of technology and innovation. </p>
-    <h2 className = "titleLeft">Corporate Info:  </h2>
+    <h2 className = {styles.titleLeft}>Corporate Info:  </h2>
       <a className={styles.corporateLinks} 
         href="https://drive.google.com/file/d/1fthgnswzDKvLPswvCzW909mj99JryBBU/view" 
         target="_blank" 
@@ -27,8 +26,7 @@ the future of technology and innovation. </p>
         target="_blank" 
         rel="noopener noreferrer">
         <h3> Pamphlet </h3></a>
-     <div>
-    </div></div>
+    </div>
   )
 }
 
