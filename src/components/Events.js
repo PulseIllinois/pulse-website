@@ -1,289 +1,277 @@
-import { useState } from "react";
-import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
-import Footer from "./Footer";
+import { motion } from "framer-motion";
+import EventCard from "./EventCard";
 import styles from "./Events.module.css";
 
-const EventCard = ({ title, time, location }) => {
-  return (
-    <div className={styles.card}>
-      <h3>{title}</h3>
-      <p>{time}</p>
-      <p>{location}</p>
-    </div>
-  )
-}
-
+// Your event data
 const data = [
   {
-    day: 0,
+    day: "Monday, February 10",
     events: [
       {
         title: "Opening Ceremony + Swag Pickup",
-        time: "5 - 5:30 PM",
+        start: "05:00 PM",
+        end: "05:30 PM",
+        description: "Join us for the opening ceremony and pick up your swag bag!",
         location: "ECEB 3002"
       },
       {
-        title: "Lightning Talk with Nick Chagin",
-        time: "5:30 - 6 PM",
+        title: "Lightning Talk",
+        start: "05:30 PM",
+        end: "06:00 PM",
+        description: "Enjoy some lightning talks from our sponsors! A great way to learn about the companies that make this event possible.",
         location: "ECEB 3002"
       },
       {
-        title: "Lightning Talks with Capital One",
-        time: "6 - 7 PM",
+        title: "Lightning Talks",
+        start: "06:00 PM",
+        end: "07:00 PM",
+        description: "Enjoy some lightning talks from our sponsors! A great way to learn about the companies that make this event possible.",
         location: "ECEB 3002"
       },
       {
         title: "Dinner",
-        time: "7 - 8 PM",
-        location: "Subway - ECEB 3002"
+        start: "07:00 PM",
+        end: "08:00 PM",
+        location: "ECEB 3002",
+        description: "Subway sandwiches will be provided for dinner. Enjoy some delicious food and network with other participants!"
       },
     ]
   },
   {
-    day: 1,
+    day: "Tuesday, February 11",
     events: [
       {
-        title: "Coffee Chat with Texas Instruments",
-        time: "10 - 11 AM",
+        title: "Coffee Chat",
+        start: "10:00 AM",
+        end: "11:00 AM",
+        description: "Join us for a coffee chat with our sponsors! A great way to network and learn about the companies that make this event possible.",
         location: "ECEB 1000/Atrium"
       },
       {
         title: "Snack",
-        time: "5:30 - 6 PM",
+        start: "05:30 PM",
+        end: "06:00 PM",
+        description: "Grab a snack to recharge! A great way to network and learn about the companies that make this event possible.",
         location: "ECEB 1013"
       },
       {
-        title: "Tech Talk with Brandon Dohman",
-        time: "6 - 7 PM",
+        title: "Tech Talk",
+        start: "06:00 PM",
+        end: "07:00 PM",
+        description: "Join us for a tech talk from one of our sponsors! A great way to learn about the companies that make this event possible.",
         location: "ECEB 1013"
       },
       {
         title: "Dinner - Jimmy Johns",
-        time: "7 - 8 PM",
+        start: "07:00 PM",
+        end: "08:00 PM",
+        description: "Enjoy some delicious food from Jimmy Johns! Wind down and relax with some great food.",
         location: "ECEB 1013"
       }
     ]
   },
   {
-    day: 2,
+    day: "Wednesday, February 12",
     events: [
       {
-        title: "Keynote - Naweed Anjum",
-        time: "5 - 6 PM",
+        title: "Keynote",
+        start: "05:00 PM",
+        end: "06:00 PM",
+        description: "Join us for a keynote speaker! Gain some insight from a professional in the tech industry.",
         location: "Grainger Auditorium"
       },
       {
         title: "Dinner - Signature Grill",
-        time: "6 - 6:45 PM",
+        start: "06:00 PM",
+        end: "06:45 PM",
+        description: "Enjoy some delicious food from Signature Grill! Wind down and relax with some great food.",
         location: "ECEB 3002"
       },
       {
         title: "Design Competition with Late Night Snack",
-        time: "7 - 9 PM",
+        start: "07:00 PM",
+        end: "09:00 PM",
+        description: "Work with your team to design a project and present it to the judges! Winners will receive a prize.",
         location: "ECEB 3002"
       },
       {
         title: "Late Night Snack (for participants)",
-        time: "8:30 - 9 PM",
+        start: "08:30 PM",
+        end: "09:00 PM",
+        description: "Tired from the design competition? Grab a snack to recharge!",
         location: "ECEB 3002"
       },
-
     ]
   },
   {
-    day: 3,
+    day: "Thursday, February 13",
     events: [
       {
         title: "Lunch & Lightning Talks - Panera",
-        time: "12 - 1:30 PM",
+        start: "12:00 PM",
+        end: "01:30 PM",
+        description: "Grab some lunch and enjoy some lightning talks from our sponsors! A great way to learn about the companies that make this event possible.",
         location: "ECEB 3002"
       },
       {
         title: "Women in Academia Panel",
-        time: "1:30 - 2:30 PM",
+        start: "01:30 PM",
+        end: "02:30 PM",
+        description: "Women in academia will share their experiences and advice for students interested in pursuing a career in academia.",
         location: "ECEB 3002"
       },
       {
-        title: "Keynote with Dinner - Nivi Baral",
-        time: "5 - 7 PM",
-        location: "ECEB 3002 - Papa Dels"
+        title: "Keynote with Dinner",
+        start: "05:00 PM",
+        end: "07:00 PM",
+        description: "Join us for a keynote speaker! Gain some insight from a professional in the tech industry.",
+        location: "ECEB 3002"
       }
     ]
   },
   {
-    day: 4,
+    day: "Friday, February 14",
     events: [
       {
         title: "Opportunities Fair",
-        time: "1 - 3 PM",
+        start: "01:00 PM",
+        end: "03:00 PM",
+        description: "Meet with RSOs, companies, and other organizations to learn about opportunities available to you!",
         location: "ECEB 1000/Atrium"
       },
       {
         title: "Software Competition with Dinner",
-        time: "4 - 6 PM",
-        location: "Grainger Auditorium - Fazolis"
-      },
-      {
-        title: "Dinner - Fazolis (for participants)",
-        time: "6 - 7 PM",
-        location: "ECEB 3002"
+        start: "04:00 PM",
+        end: "06:00 PM",
+        description: "Put your coding skills to the test in our software competition! Winners will receive a prize.",
+        location: "Grainger Auditorium"
       },
       {
         title: "Soldering Workshop - HKN",
-        time: "7 - 9 PM",
+        start: "07:00 PM",
+        end: "09:00 PM",
+        description: "Learn how to solder with HKN! A great skill to have for any engineer.",
         location: "ECEB 1001"
       },
     ]
   },
+
   {
-    day: 5,
+    day: "Saturday, February 15",
     events: [
       {
         title: "Hardware Competition",
-        time: "10 AM - 7 PM",
+        start: "10:00 AM",
+        end: "07:00 PM",
+        description: "Want to build something cool? Join our hardware competition! Winners will receive a prize.",
         location: "ECEB 3002"
       },
       {
         title: "Breakfast (for participants)",
-        time: "10 - 11 AM",
+        start: "10:00 AM",
+        end: "1:00 AM",
+        description: "Start strong with some breakfast to fuel your day!",
         location: "ECEB 3002"
       },
       {
         title: "Dinner - Dominoes (for participants)",
-        time: "5 - 6 PM",
+        start: "05:00 PM",
+        end: "06:00 PM",
+        description: "Finish strong with some dinner to recharge! Winners of the hardware competition will be announced.",
         location: "ECEB 3002"
       },
     ]
   },
   {
-    day: 6,
+    day: "Sunday, February 16",
     events: [
       {
         title: "High School Day",
-        time: "9 AM - 2 PM",
+        start: "09:00 AM",
+        end: "02:00 PM",
+        description: "High school students are invited to join us for a day of tech talks, workshops, and more!",
         location: "ECEB"
       },
       {
         title: "Meet and Greet (Snacks Provided)",
-        time: "9 - 9:30 AM",
+        start: "09:00 AM",
+        end: "09:30 AM",
+        description: "Meet other high school students and get ready for a day of fun!",
         location: "ECEB 3002"
       },
       {
         title: "ECEB Tour",
-        time: "9:30 AM - 10 AM",
+        start: "09:30 AM",
+        end: "10:00 PM",
+        description: "Tour the ECE building and learn about the different labs and resources available to students.",
         location: "ECEB 3002"
       },
       {
         title: "Coding Workshop 1",
-        time: "10 - 11 AM",
-        location: "ECEB 2022/3022"
+        start: "10:00 AM",
+        end: "11:00 AM",
+        description: "Learn the basics of coding with our coding workshop! No experience necessary.",
+        location: "ECEB 3022"
       },
       {
         title: "Coding Workshop 2",
-        time: "11 AM - 12 PM",
-        location: "ECEB 2022/3022"
+        start: "11:00 AM",
+        end: "12:00 PM",
+        description: "Continue learning coding with our coding workshop! No experience necessary.",
+        location: "ECEB 3022"
       },
       {
-        title: "Speakers + Lunch - Dominoes",
-        time: "12 - 1 PM",
+        title: "Speaker Panel",
+        start: "12:00 PM",
+        end: "01:00 PM",
+        description: "Join us for a panel of speakers who will share their experiences and advice for high school students interested in pursuing a career in tech.",
         location: "ECEB 3002"
       },
       {
-        title: "Competitions\n(with Prizes)",
-        time: "1 - 2 PM",
+        title: "Competitions and Prizes",
+        start: "01:00 PM",
+        end: "02:00 PM",
+        description: "Participate in coding and hardware competitions and win some cool prizes!",
         location: "ECEB 3002"
       }
     ]
-  },
-]
+  }
+];
 
 function Events() {
-  const [currentDay, setCurrentDay] = useState(0);
-  const [eventData, setEventData] = useState(data[0].events);
-
-  const handleClick = (day) => {
-    setCurrentDay(day);
-    let newData = data.filter((item) => item.day === day)[0].events;
-    setEventData();
-    setEventData(newData);
-  }
-
-  const handleChange = (event) => {
-    let day = event.target.value;
-    handleClick(day);
-  }
-
   return (
     <div className={styles.container}>
       <h1>Event Schedule</h1>
-
-      {/* <div className={styles.btnContainer}>
-        <button onClick={() => handleClick(0)} className={`${styles.dayBtn} ${currentDay === 0 ? styles.active : ''}`}>February 6th</button>
-        <button onClick={() => handleClick(1)} className={`${styles.dayBtn} ${currentDay === 1 ? styles.active : ''}`}>February 7th</button>
-        <button onClick={() => handleClick(2)} className={`${styles.dayBtn} ${currentDay === 2 ? styles.active : ''}`}>February 8th</button>
-        <button onClick={() => handleClick(3)} className={`${styles.dayBtn} ${currentDay === 3 ? styles.active : ''}`}>February 9th</button>
-        <button onClick={() => handleClick(4)} className={`${styles.dayBtn} ${currentDay === 4 ? styles.active : ''}`}>February 10th</button>
-        <button onClick={() => handleClick(5)} className={`${styles.dayBtn} ${currentDay === 5 ? styles.active : ''}`}>February 11th</button>
-        <button onClick={() => handleClick(6)} className={`${styles.dayBtn} ${currentDay === 6 ? styles.active : ''}`}>February 12th</button>
-      </div> */}
-
-      <h2>
-        TBA
-      </h2>
-      
-      {/* <div className={styles.mobileBtn}>
-        <FormControl
-          fullWidth
-          sx={{
-            borderColor: "white",
-            color: "white",
-          }}
-        >
-          <InputLabel sx={{ color: "white" }} id="day-label">Day</InputLabel>
-          <Select
-            labelId="day-label"
-            id="day-select"
-            value={currentDay}
-            defaultValue={0}
-            label="Age"
-            onChange={handleChange}
-            sx={{
-              borderColor: "white",
-              color: "white",
-              '.MuiOutlinedInput-notchedOutline': {
-                borderColor: 'white',
-              },
-              '&:hover .MuiOutlinedInput-notchedOutline': {
-                borderColor: 'white',
-                borderWidth: '0.15rem',
-              },
-            }}
-          >
-            <MenuItem value={0}>February 6th</MenuItem>
-            <MenuItem value={1}>February 7th</MenuItem>
-            <MenuItem value={2}>February 8th</MenuItem>
-            <MenuItem value={3}>February 9th</MenuItem>
-            <MenuItem value={4}>February 10th</MenuItem>
-            <MenuItem value={5}>February 11th</MenuItem>
-            <MenuItem value={6}>February 12th</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
-
       <div className={styles.row}>
-        {eventData.map((item) => (
-          <EventCard
-            key={`${item.title} ${item.time}`}
-            title={item.title}
-            time={item.time}
-            location={item.location}
-          />
+        {data.map((event, index) => (
+          <div key={index} className={styles.datebox}>
+            <motion.h2
+              className={styles.day}
+              style={{ position: "sticky", top: 80, zIndex: 1, paddingTop: 10, paddingBottom: 10 }}
+              initial={{ opacity: 0, x:-50 }}
+              whileInView={{ opacity: 1, x:0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              {event.day}
+            </motion.h2>
+            <div className={styles.cardbox}>
+              {event.events.map((item, idx) => (
+                <EventCard
+                  key={`${item.title}-${idx}`}
+                  title={item.title}
+                  start={item.start}
+                  end={item.end}
+                  location={item.location}
+                  description = {item.description}
+                />
+              ))}
+            </div>
+          </div>
         ))}
-      </div> */}
-
-      <Footer className={styles.footer} />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Events
+export default Events;
