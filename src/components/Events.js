@@ -214,9 +214,12 @@ function Events() {
 
   return (
     <div className={styles.container}>
-      <h1>Event Schedule</h1>
-
-       <div className={styles.btnContainer}>
+      <div><h1>Event Schedule</h1>
+      <h2>
+     <a className={styles.link} href ="https://calendar.google.com/calendar/u/4?cid=Mjg4YzJjYWRkYTk5ZDkzODhmY2NhMmU1ZGI2MzFjNzQ3NTQyOWEwMjk2MGNhY2MwY2M5NTZlNjE1NzNmNzVjNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+        target="_blank" rel="noopener noreferrer">
+        Update Google Calendar</a></h2> </div>      
+        <div className={styles.btnContainer}>
         <button onClick={() => handleClick(0)} className={`${styles.dayBtn} ${currentDay === 0 ? styles.active : ''}`}>February 10th</button>
         <button onClick={() => handleClick(1)} className={`${styles.dayBtn} ${currentDay === 1 ? styles.active : ''}`}>February 11th</button>
         <button onClick={() => handleClick(2)} className={`${styles.dayBtn} ${currentDay === 2 ? styles.active : ''}`}>February 12th</button>
@@ -255,7 +258,7 @@ function Events() {
               },
             }}
           >
-            <MenuItem value={0}>February 106th</MenuItem>
+            <MenuItem value={0}>February 10th</MenuItem>
             <MenuItem value={1}>February 11th</MenuItem>
             <MenuItem value={2}>February 12th</MenuItem>
             <MenuItem value={3}>February 13th</MenuItem>

@@ -1,174 +1,80 @@
-import Footer from "./Footer";
 import GroupPics from "./GroupPics";
 import styles from "./OurTeam.module.css";
 
-const directors =
+const members =
 {
-  title: "Co-Directors",
   members: [
     {
       name: "Ben Blade",
-      img: require("../assets/2025/team/ben.jpeg")
+      img: require("../assets/2025/team/ben.jpeg"),
+      title: "Co-Director"
     },
     {
       name: "Akshat Singh",
-      img: require("../assets/2025/team/akshat.jpeg")
+      img: require("../assets/2025/team/akshat.jpeg"),
+      title: "Co-Director",
     },
-  ]
-}
-
-/**
-const secretary =
-{
-  title: "Secretary",
-  members: [
-    {
-      name: "Steffi Chen",
-      img: require("../assets/2023/team/steffi.png")
-    }
-  ]
-}
-*/
-
-const treasurer =
-{
-  title: "Treasurer",
-  members: [
     {
       name: "Cameron Marchese",
-      img: require("../assets/2025/team/cameron.jpeg")
-    }
-  ]
-}
-
-const corporate =
-{
-  title: "Corporate & Networking Directors",
-  members: [
-    {
-      name: "Konark Dhingreja",
-      img: require("../assets/2025/team/konark.png")
+      img: require("../assets/2025/team/cameron.jpeg"),
+      title: "Treasurer"
     },
-    {
-      name: "Stephanie Eze",
-      img: require("../assets/2025/team/stephanie.jpeg")
-    }
-  ]
-}
-
-/**
-const wit =
-{
-  title: "Women in Tech Directors",
-  members: [
-    // {
-    //   name: "Niharika ChintalapatiI",
-    //   img: require("../assets/2023/team/neha.png")
-    // },
-    {
-      name: "Manogna Rajanala",
-      img: require("../assets/2023/team/manogna.png")
-    },
-  ]
-}
-*/
-
-const technical =
-{
-  title: "Technical Directors",
-  members: [
-    {
-      name: "Aryan Gosaliya",
-      img: require("../assets/2025/team/aryan.png")
-    },
-    {
-      name: "Avaneesh Kumar",
-      img: require("../assets/2025/team/avaneesh.jpeg")
-    }
-  ]
-}
-
-const competitions =
-{
-  title: "Competitions Directors",
-  members: [
-    {
-      name: "Ananya Krishnan",
-      img: require("../assets/2025/team/ananya.jpeg")
-    },
-    {
-      name: "Mithesh Ballae",
-      img: require("../assets/2025/team/mithesh.png")
-    },
-  ]
-}
-
-const logistics =
-{
-  title: "Logistics Directors",
-  members: [
     {
       name: "Jack Gauer",
-      img: require("../assets/2025/team/jack.jpeg")
+      img: require("../assets/2025/team/jack.jpeg"),
+      title: "Logistics Director"
     },
     {
       name: "Justin Chen",
-      img: require("../assets/2025/team/justin.jpeg")
+      img: require("../assets/2025/team/justin.jpeg"),
+      title: "Logistics Director"
+    },
+    {
+      name: "Avaneesh Kumar",
+      img: require("../assets/2025/team/avaneesh.jpeg"),
+      title: "Technical Director"
+    },
+    {
+      name: "Aryan Gosaliya",
+      img: require("../assets/2025/team/aryan.png"),
+      title: "Technical Director"
+    },
+    {
+      name: "Konark Dhingreja",
+      img: require("../assets/2025/team/konark.png"),
+      title: "Corporate Director"
+    },
+    {
+      name: "Stephanie Eze",
+      img: require("../assets/2025/team/stephanie.jpeg"),
+      title: "Corporate Director"
+    },
+    {
+      name: "Mithesh Ballae Ganesh",
+      img: require("../assets/2025/team/mithesh.png"),
+      title: "Competitions Director"
+    },
+    {
+      name: "Ananya Krishnan",
+      img: require("../assets/2025/team/ananya.jpeg"),
+      title: "Competitions Director"
+    },
+    {
+      name: "Riya Karkhanis",
+      img: require("../assets/2025/team/riya.jpeg"),
+      title: "Social Media and Marketing Director"
     },
   ]
 }
-
-const social_media_marketing =
-{
-  title: "Social Media & Marketing Director",
-  members: [
-    {
-      name: "Riya Karkhanis",
-      img: require("../assets/2025/team/riya.jpeg")
-    }
-  ]
-}
-
-/**
-const marketing =
-{
-  title: "Marketing",
-  members: [
-    {
-      name: "Akshat Singh",
-      img: require("../assets/2023/team/akshat.png")
-    }
-  ]
-}
-*/
-
 
 function OurTeam() {
   return (
     <div className={styles.container}>
       <h1>Our Team</h1>
       <div className={styles.row}>
-        <GroupPics title={directors.title} data={directors.members} />
+        <GroupPics data={members.members}/>
       </div>
-
-      <div className={styles.row}>
-        <GroupPics title={treasurer.title} data={treasurer.members} />
-        <GroupPics title={technical.title} data={technical.members} />
-      </div>
-
-      <div className={styles.row}>
-        <GroupPics title={corporate.title} data={corporate.members} />
-        <GroupPics title={social_media_marketing.title} data={social_media_marketing.members} />
-      </div>
-
-      <div className={styles.row}>
-        <GroupPics title={logistics.title} data={logistics.members} />
-      </div>
-
-      <div className={styles.row}>
-        <GroupPics title={competitions.title} data={competitions.members} />
-      </div>
-      <Footer className={styles.footer} />
+      {/* <Footer className={styles.footer} /> */}
     </div>
   )
 }

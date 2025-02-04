@@ -18,6 +18,10 @@
   gap: 65px;
 }
 
+.link {
+    color: lightblue;
+}
+
 .footer {
   height: 440px;
 }
