@@ -28,7 +28,6 @@ the future of technology and innovation. </p>
         rel="noopener noreferrer">
         <h3> Pamphlet </h3></a>
      <div>
-    <Footer className={styles.footer} />
     </div></div>
   )
 }

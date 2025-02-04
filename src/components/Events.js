@@ -212,13 +212,12 @@ function Events() {
     handleClick(day);
   }
 
-  return (
+  return (<div>
     <div className={styles.container}>
       <div><h1>Event Schedule</h1>
-      <h2>
      <a className={styles.link} href ="https://calendar.google.com/calendar/u/4?cid=Mjg4YzJjYWRkYTk5ZDkzODhmY2NhMmU1ZGI2MzFjNzQ3NTQyOWEwMjk2MGNhY2MwY2M5NTZlNjE1NzNmNzVjNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
         target="_blank" rel="noopener noreferrer">
-        Update Google Calendar</a></h2> </div>      
+        <h2>Google Calendar</h2></a> </div>      
         <div className={styles.btnContainer}>
         <button onClick={() => handleClick(0)} className={`${styles.dayBtn} ${currentDay === 0 ? styles.active : ''}`}>February 10th</button>
         <button onClick={() => handleClick(1)} className={`${styles.dayBtn} ${currentDay === 1 ? styles.active : ''}`}>February 11th</button>
@@ -278,8 +277,7 @@ function Events() {
             location={item.location}
           />
         ))}
-      </div>
-      <Footer className={styles.footer} />
+      </div></div>
       </div>
   )
 }
