@@ -79,7 +79,7 @@ const data = [
       {
         title: "Texas Instruments Tech Talk",
         time: "3 - 4:00 PM",
-        location: "ECEB 1013"
+        location: "ECEB 3002"
       },
       {
         title: "Women in Tech Keynote with Professor Bernhard",
@@ -147,12 +147,12 @@ function Events() {
         target="_blank" rel="noopener noreferrer">
         <h2>Google Calendar</h2></a> </div>      
         <div className={styles.btnContainer}>
-        <button onClick={() => handleClick(0)} className={`${styles.dayBtn} ${currentDay === 0 ? styles.active : ''}`}>February 10th</button>
-        <button onClick={() => handleClick(1)} className={`${styles.dayBtn} ${currentDay === 1 ? styles.active : ''}`}>February 11th</button>
-        <button onClick={() => handleClick(2)} className={`${styles.dayBtn} ${currentDay === 2 ? styles.active : ''}`}>February 12th</button>
-        <button onClick={() => handleClick(3)} className={`${styles.dayBtn} ${currentDay === 3 ? styles.active : ''}`}>February 13th</button>
-        <button onClick={() => handleClick(4)} className={`${styles.dayBtn} ${currentDay === 4 ? styles.active : ''}`}>February 14th</button>
-        <button onClick={() => handleClick(5)} className={`${styles.dayBtn} ${currentDay === 5 ? styles.active : ''}`}>February 15th</button>
+        <button onClick={() => handleClick(0)} className={`${styles.dayBtn} ${currentDay === 0 ? styles.active : ''}`}>February 10th<br /> (Monday)</button>
+        <button onClick={() => handleClick(1)} className={`${styles.dayBtn} ${currentDay === 1 ? styles.active : ''}`}>February 11th <br /> (Tuesday)</button>
+        <button onClick={() => handleClick(2)} className={`${styles.dayBtn} ${currentDay === 2 ? styles.active : ''}`}>February 12th <br /> (Wednesday)</button>
+        <button onClick={() => handleClick(3)} className={`${styles.dayBtn} ${currentDay === 3 ? styles.active : ''}`}>February 13th<br /> (Thursday)</button>
+        <button onClick={() => handleClick(4)} className={`${styles.dayBtn} ${currentDay === 4 ? styles.active : ''}`}>February 14th <br /> (Friday)</button>
+        <button onClick={() => handleClick(5)} className={`${styles.dayBtn} ${currentDay === 5 ? styles.active : ''}`}>February 15th <br /> (Saturday)</button>
       </div>
 
       
