@@ -184,12 +184,12 @@ function Events() {
               },
             }}
           >
-            <MenuItem value={0}>February 10th</MenuItem>
-            <MenuItem value={1}>February 11th</MenuItem>
-            <MenuItem value={2}>February 12th</MenuItem>
-            <MenuItem value={3}>February 13th</MenuItem>
-            <MenuItem value={4}>February 14th</MenuItem>
-            <MenuItem value={5}>February 15th</MenuItem>
+            <MenuItem value={0}>February 10th <br /> (Monday)</MenuItem>
+            <MenuItem value={1}>February 11th <br /> (Tuesday)</MenuItem>
+            <MenuItem value={2}>February 12th <br /> (Wednesday)</MenuItem>
+            <MenuItem value={3}>February 13th <br /> (Thursday)</MenuItem>
+            <MenuItem value={4}>February 14th <br /> (Friday)</MenuItem>
+            <MenuItem value={5}>February 15th <br /> (Saturday)</MenuItem>
           </Select>
         </FormControl>
       </div>
