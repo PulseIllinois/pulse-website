@@ -37,6 +37,11 @@ const data = [
         location: "ECEB Atrium"
       },
       {
+        title: "Tesla X WECE Coffee Chat",
+        time: "3 - 4:30 PM",
+        location: "ECEB 2013"
+      },
+      {
         title: "Astera Labs Tech Talk",
         time: "6 - 7:00 PM",
         location: "ECEB 1013"
