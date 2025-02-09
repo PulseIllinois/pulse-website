@@ -89,12 +89,12 @@ const data = [
       {
         title: "Women in Academia Panel",
         time: "1 - 2:00 PM",
-        location: "TBD"
+        location: "ECEB 3002"
       },
       {
         title: "WIT Lunch",
         time: "2 - 3:00 PM",
-        location: "TBD"
+        location: "ECEB 3002"
       },
       {
         title: "Women in Tech Keynote with Professor Bernhard",
