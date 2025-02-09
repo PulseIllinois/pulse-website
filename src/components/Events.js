@@ -38,7 +38,7 @@ const data = [
       },
       {
         title: "Tesla X WECE Coffee Chat",
-        time: "3 - 4:30 PM",
+        time: "3:30 - 4:30 PM",
         location: "ECEB 2013"
       },
       {
@@ -85,6 +85,16 @@ const data = [
         title: "Texas Instruments Tech Talk",
         time: "3 - 4:00 PM",
         location: "ECEB 3002"
+      },
+      {
+        title: "Women in Academia Panel",
+        time: "1 - 2:00 PM",
+        location: "TBD"
+      },
+      {
+        title: "WIT Lunch",
+        time: "2 - 3:00 PM",
+        location: "TBD"
       },
       {
         title: "Women in Tech Keynote with Professor Bernhard",
