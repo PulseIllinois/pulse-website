@@ -22,7 +22,7 @@ const data = [
         location: "ECEB 3002"
       },
       {
-        title: "Dinner (Subway)",
+        title: "Dinner (Jimmy John's)",
         time: "6 - 7:00 PM",
         location: "ECEB 3002"
       },
@@ -58,7 +58,7 @@ const data = [
     events: [
       {
         title: "Texas Instruments Coffee Chat",
-        time: "10 AM - 12:00 PM",
+        time: "10 - 11:00 AM",
         location: "ECEB Atrium"
       },
       {
@@ -92,7 +92,7 @@ const data = [
         location: "ECEB 3002"
       },
       {
-        title: "WIT Lunch",
+        title: "WIT Lunch (Subway)",
         time: "2 - 3:00 PM",
         location: "ECEB 3002"
       },
