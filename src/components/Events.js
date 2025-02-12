@@ -82,11 +82,11 @@ const data = [
     day: 3,
     events: [
       {
-        title: "Texas Instruments Tech Talk",
-        time: "3 - 4:00 PM",
-        location: "ECEB 3002"
+        title: "Marvell Coffee Chat",
+        time: "10 - 11:00 AM",
+		location: "ECEB Atrium"
       },
-      {
+	  {
         title: "Women in Academia Panel",
         time: "1 - 2:00 PM",
         location: "ECEB 3002"
@@ -97,8 +97,13 @@ const data = [
         location: "ECEB 3002"
       },
       {
+        title: "Texas Instruments Tech Talk",
+        time: "3 - 4:00 PM",
+        location: "ECEB 3002"
+	  },
+	   {
         title: "Women in Tech Keynote with Professor Bernhard",
-        time: "5:00 - 6:00 PM",
+        time: "5 - 6:00 PM",
         location: "ECEB 1002"
       },
       {
